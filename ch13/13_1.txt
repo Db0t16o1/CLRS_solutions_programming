@@ -1,0 +1,16 @@
+Solution 13.1-1 
+  for bh(root) = 2, level 1 and 3 nodes are all red.
+  for bh(root) = 3, level 1 nodes are black or level 3 nodes are black.
+  for bh(root) = 4, all nodes are black.
+
+Solution 13.1-2
+  No,addenum node if red, it won't be a R-B tree because it will not satisfy property 4.
+  No, because if addenum node is black, node with key 38 has undefined black-height. A contradiction to property 5.
+  
+Solution 13.1-3
+  property 1,3,4,5 checked..
+  property 2 satisfied, the relaxed R-B tree is R-B tree.
+ 
+Solution 13.1-4
+  
+ 

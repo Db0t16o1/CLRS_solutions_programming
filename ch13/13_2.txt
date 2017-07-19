@@ -15,6 +15,15 @@ else
     y.p.left = x
 y.p = x
 x. right = y
+
+13.2-2
+
+For every node at levels greater or equal to 1, a rotation is possible with it's parent node.
+So, we are left with (n-1)C1 choices, as root node rotations are accounted in rotations of nodes of level 1.
+(n-1)C1 = n-1
+Hence Proved.
+
+
     
   
   

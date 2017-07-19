@@ -1,0 +1,20 @@
+Ex 13.2-1
+
+RIGHT-ROTATE(T,y)
+x = y.left
+y.left = x.right
+if x.right != T.NIL
+  x.right.p = y
+x.p = y.p
+if y.p == T.NIL
+  T.root = x
+else
+  if y.p.right == y
+    y.p.right = x
+  else
+    y.p.left = x
+y.p = x
+x. right = y
+    
+  
+  

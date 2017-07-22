@@ -1,4 +1,4 @@
-Ex 13.2-1
+Solution 13.2-1
 
 RIGHT-ROTATE(T,y)
 x = y.left
@@ -16,14 +16,25 @@ else
 y.p = x
 x. right = y
 
-13.2-2
+Solution 13.2-2
 
 For every node at levels greater or equal to 1, a rotation is possible with it's parent node.
 So, we are left with (n-1)C1 choices, as root node rotations are accounted in rotations of nodes of level 1.
 (n-1)C1 = n-1
 Hence Proved.
 
+Solution 13.2-3
 
+Depth of a increases.
+Depth of b remains same.
+Depth of c decreases.
     
+Solution 13.2-4  
   
-  
+if each node having a left child is right rotated about the root node of child-sub-tree, in O(n-1) rotations, we get a BST with right going chain.
+similar arguments can be given for a left going chain BST.
+any intermideate stage can thus be achieved in a linear combination of these extreme states, hence proved.
+
+Solution 13.2-5
+
+

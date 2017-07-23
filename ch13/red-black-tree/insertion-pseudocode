@@ -1,0 +1,24 @@
+RB-INSERT (T,z)
+
+y = T.nil
+x = T.root
+while x != T.nil :
+	y = x
+	if z.key < x.key:
+		x = x.left
+	else:	
+		x = x.right 
+z.parent = y
+z.color = R
+z.right = T.nil
+z.left = T.nil
+if y == T.nil :
+	T.root = z
+else if y.key < z.key :
+	y.right = z
+else :
+	y.left = z
+RB-INSERT-FIXUP(T,z)	
+*****************************************************************************************************************************
+
+RB-INSERT-FIXUP(T,z)

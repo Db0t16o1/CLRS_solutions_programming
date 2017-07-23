@@ -22,3 +22,39 @@ RB-INSERT-FIXUP(T,z)
 *****************************************************************************************************************************
 
 RB-INSERT-FIXUP(T,z)
+// invariants maintained during the looping
+//Node z is red.
+//if z.p is root, z.p is black
+// If tree violates any of the red-black properties, then it violates at most one of them,and the violation is of either property 2 or 4. 
+//if tree violates property 2, it is because z is the root and is red. If the tree violates property 4, it is because both z and p.z are black.
+
+while z.p.color == red :
+	if z.p == z.p.p.left :
+		y = z.p.p.right 
+		if y.color == red :
+			z.p.color = black
+			y.color = black
+			y.p.color = red
+			z = z.p.p
+		else :
+			if z == z.p.right :
+				z = z.p 
+				Left-Rotate(T,z)
+			z.p.p.color = red
+			z.p.color = black
+			Right-Rotate(T,z.p.p)
+	else :
+		y = z.p.p.left
+		if y.color == red :
+			z.p.color = black
+			y.color = black
+			z.p.p.color = black
+			z = z.p.p
+		else:
+			if z == z.p.left :
+				z = z.p
+				Right-Rotate(t,z)
+			z.p.color = black
+			z.p.p.color = red
+			Left-Rotate(T,z.p.p)
+T.root.color = black			

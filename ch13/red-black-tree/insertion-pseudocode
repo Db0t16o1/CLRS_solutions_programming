@@ -58,3 +58,36 @@ while z.p.color == red :
 			z.p.p.color = red
 			Left-Rotate(T,z.p.p)
 T.root.color = black			
+
+***************************************************************************************************************************
+
+Right-Rotate(T,y)
+x = y.left
+y.left = x.right
+if x.right != T.NIL
+  x.right.p = y
+x.p = y.p
+if y.p == T.NIL
+  T.root = x
+else
+  if y.p.right == y
+    y.p.right = x
+  else
+    y.p.left = x
+y.p = x
+x. right = y
+****************************************************************************************************************************
+Left-Rotate(T,x)
+y = x.right
+x.right = y.left
+if y.left != T.nil
+	y.left.p = x
+y.p = x.p
+if x.p == T.nil
+	T.root = y
+else-if x.p.left == x:
+	x.p.left = y
+else
+	x.p.right = y
+x.p = y
+y.left = x

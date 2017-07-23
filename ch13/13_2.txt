@@ -37,4 +37,15 @@ any intermideate stage can thus be achieved in a linear combination of these ext
 
 Solution 13.2-5
 
-
+A right-rotation makes the input node right child of the left subtree. Thus for a tree to be right convertible, from T1 to T2, 
+the root node of T2 must be in the left flank of Tree T1, and recursively for each subsequent left and right subtrees.
+T1 : 6,7,8,9
+T2 : 9,8,6,7
+Root of T2 is on right flank in T1, so T1 is not right-convertible.
+now each right rotation involves one upward movement of the node.
+So, root node in T2 can take atmost n-1 rotations in T1 to become root in T1'.(case of a left chained T1, to right chained T2)
+similarly n-2,n-3 .. for subsequent nodes,
+thus (n-1 + n - 2 + ...+ 1)
+= n *(n-1) / 2
+= O(n^2)
+Hence Proved

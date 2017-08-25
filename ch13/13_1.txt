@@ -14,14 +14,24 @@ Solution 13.1-3
 Solution 13.1-4
   
  
-Solution 13.2-5
+Solution 13.1-5
 
 Property-5 invariant of a R-B tree states that the black-height of a node is constant. Property-4 and Property-5 combinely states that from a node of RB tree, path to leaves contains constant number of black nodes, equal to the black height of tree and can contain atmost bh(x) + 1 red nodes if the node x is black and atmost bh(x) red nodes if the node x is red.
 Hence Proved.
 
-Solution 13.2-6
+Solution 13.1-6
 
 The root must be black for a RB tree.
 to maximize the number of nodes, alternate levels will be red.
 so number of nodes is  ∑(1 + 2^1 + 2^2 +....+ 2^(2*k+1))
 = 2^(2k+2) - 1
+
+Solution 13.1-7
+number of completly filled levels of the RB tree, fl(n) = [ lg(n+1) ]
+Least number of blacks can be, blacks at levels, 0,2,4, .... ,[fl(n)/2]*2,nbmax(n) = 2^0 + 2^2 + 2^4 + 2^6 + .... + 2^ ([fl(n)/2]*2)
+Rest nodes will be red, nrmax(n) = n - nbmax(n)
+Required maximum  ratio = nbmax(n)/nbmin(n)
+
+maximum number of black nodes possible ,nbmin(n)= 2^fl(n)
+minimum nuber of red nodes possible, nrmin(n) = n - 2^fl(n)
+minimum ratio = nbmin(n)/nrmin(n)

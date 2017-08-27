@@ -1,0 +1,27 @@
+13.3-1
+Because setting the color of the newly inserted node to a formerly RB tree will introduce a violation to the property of RB tree that every node has a well defined black height assosiated with it.
+
+13.3-2
+                                38
+                               /   \
+                            19,r     41
+                          /     \
+                         12     31
+                         /
+                        8,r
+13.3-4
+the execution of case 2 and case 3 terminates the loop because it settles the only violation possible in rule-4 without inducing any other violation
+invariant (c) is unsatisfied and thus loop terminates. Root's parent can only be recolored in this step if at initiation of case2/case3 z's parent is 
+root and is not black which is contrary to the loops invariant and thus this possibility ceases to exist.
+after execution of case 1, the z pointer moves up two places. Recoloring is done of z.p which has a sibling (that was initially red too) and it's sibling, thus z.p is not the root node .
+even if the z.p is a child of root node and root is painted red after step 1, loop stops because root's parent, the sentinel is black, root gets repainted in the RB-INSERT-FIXUP's last step.
+thus Professor Teach has a unfounded concern.
+13.3-5
+There exist two cases, after insertion of a node, if n>1,
+CASE - A : Fixation required
+in case 1, z and z.p and sibling of z.p are all red. Recoloring is performed on z.p and sibling of z.p; z remains red.
+in case 2/3, the rotated subtree has two red nodes, for sure and hence proved.
+case 0, only recoloring of root node occurs only for n=1
+CASE- B : Fixation not required
+in this, newly added node is red, it remains red if no furthur addition is performed.
+
